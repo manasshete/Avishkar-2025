@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - VShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>VShare</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ngos.html" class="nav-link">NGOs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <h1>About VShare</h1>
+                        <p>Connecting hearts, creating change</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <p>VShare is a revolutionary donation portal developed as a hackathon project with a mission to bridge the gap between generous donors and impactful NGOs. Our platform ensures that every donation reaches the right hands and creates meaningful change in communities worldwide.</p>
+                        
+                        <p>Built with transparency and trust at its core, VShare provides a seamless experience for donors to discover verified NGOs, make secure donations, and track the real-world impact of their contributions.</p>
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <h3>50+</h3>
+                                <p>Verified NGOs</p>
+                            </div>
+                            <div class="stat">
+                                <h3>1000+</h3>
+                                <p>Lives Impacted</p>
+                            </div>
+                            <div class="stat">
+                                <h3>100%</h3>
+                                <p>Transparency</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-details">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>team@vshare.org</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hackathon Venue, Innovation Hub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="ngo">NGO Partnership</option>
+                                <option value="donor">Donor Support</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>VShare</h3>
+                    <p>Connecting hearts, creating change</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="ngos.html">NGOs</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="register.html">Register</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made at [Hackathon Name] by Team VShare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

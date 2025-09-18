@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register NGO - VShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>VShare</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ngos.html" class="nav-link">NGOs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link active">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="register-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Register Your NGO</h1>
+                <p>Join our platform and connect with donors who care about your cause</p>
+            </div>
+            
+            <div class="register-content">
+                <div class="register-form-container">
+                    <div class="progress-bar">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span>Basic Info</span>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-number">2</div>
+                            <span>Organization</span>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="step-number">3</div>
+                            <span>Verification</span>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <div class="step-number">4</div>
+                            <span>Complete</span>
+                        </div>
+                    </div>
+
+                    <form class="registration-form">
+                        <!-- Step 1: Basic Information -->
+                        <div class="form-step active" data-step="1">
+                            <h3>Basic Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactFirstName">Contact Person First Name *</label>
+                                    <input type="text" id="contactFirstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactLastName">Contact Person Last Name *</label>
+                                    <input type="text" id="contactLastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number *</label>
+                                    <input type="tel" id="contactPhone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="position">Position/Title *</label>
+                                    <input type="text" id="position" placeholder="e.g., Executive Director" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Organization Details -->
+                        <div class="form-step" data-step="2">
+                            <h3>Organization Details</h3>
+                            <div class="form-group">
+                                <label for="orgName">Organization Name *</label>
+                                <input type="text" id="orgName" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="orgType">Organization Type *</label>
+                                    <select id="orgType" required>
+                                        <option value="">Select type</option>
+                                        <option value="501c3">501(c)(3) Non-profit</option>
+                                        <option value="charity">Registered Charity</option>
+                                        <option value="foundation">Foundation</option>
+                                        <option value="community">Community Organization</option>
+                                        <option value="religious">Religious Organization</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cause">Primary Cause *</label>
+                                    <select id="cause" required>
+                                        <option value="">Select cause</option>
+                                        <option value="education">Education</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="environment">Environment</option>
+                                        <option value="poverty">Poverty Alleviation</option>
+                                        <option value="hunger">Hunger Relief</option>
+                                        <option value="housing">Housing</option>
+                                        <option value="disaster">Disaster Relief</option>
+                                        <option value="children">Children's Welfare</option>
+                                        <option value="elderly">Elderly Care</option>
+                                        <option value="animals">Animal Welfare</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mission">Mission Statement *</label>
+                                <textarea id="mission" placeholder="Describe your organization's mission and goals..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Organization Address *</label>
+                                <textarea id="address" placeholder="Full address including city, state, and zip code" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" id="website" placeholder="https://yourorganization.org">
+                                </div>
+                                <div class="form-group">
+                                    <label for="yearEstablished">Year Established *</label>
+                                    <input type="number" id="yearEstablished" min="1900" max="2024" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Verification Documents -->
+                        <div class="form-step" data-step="3">
+                            <h3>Verification Documents</h3>
+                            <p class="step-description">Please upload the required documents to verify your organization's legitimacy.</p>
+                            
+                            <div class="upload-section">
+                                <div class="upload-item">
+                                    <label>Tax-Exempt Certificate (501c3) *</label>
+                                    <div class="file-upload">
+                                        <input type="file" id="taxCert" accept=".pdf,.jpg,.jpeg,.png" required>
+                                        <div class="upload-placeholder">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <span>Click to upload or drag and drop</span>
+                                            <small>PDF, JPG, PNG (Max 5MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="upload-item">
+                                    <label>Organization Registration Certificate *</label>
+                                    <div class="file-upload">
+                                        <input type="file" id="regCert" accept=".pdf,.jpg,.jpeg,.png" required>
+                                        <div class="upload-placeholder">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <span>Click to upload or drag and drop</span>
+                                            <small>PDF, JPG, PNG (Max 5MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="upload-item">
+                                    <label>Board of Directors List</label>
+                                    <div class="file-upload">
+                                        <input type="file" id="boardList" accept=".pdf,.doc,.docx">
+                                        <div class="upload-placeholder">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <span>Click to upload or drag and drop</span>
+                                            <small>PDF, DOC, DOCX (Max 5MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="upload-item">
+                                    <label>Recent Financial Statement</label>
+                                    <div class="file-upload">
+                                        <input type="file" id="financial" accept=".pdf,.xls,.xlsx">
+                                        <div class="upload-placeholder">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <span>Click to upload or drag and drop</span>
+                                            <small>PDF, XLS, XLSX (Max 5MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additionalInfo">Additional Information</label>
+                                <textarea id="additionalInfo" placeholder="Any additional information about your organization, current projects, or funding needs..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Review and Submit -->
+                        <div class="form-step" data-step="4">
+                            <h3>Review and Submit</h3>
+                            <div class="review-section">
+                                <div class="review-item">
+                                    <h4>Contact Information</h4>
+                                    <div class="review-content" id="reviewContact"></div>
+                                </div>
+                                <div class="review-item">
+                                    <h4>Organization Details</h4>
+                                    <div class="review-content" id="reviewOrg"></div>
+                                </div>
+                                <div class="review-item">
+                                    <h4>Documents Uploaded</h4>
+                                    <div class="review-content" id="reviewDocs"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="terms-section">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms" required>
+                                    <label for="terms">I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a> *</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="accuracy">
+                                    <label for="accuracy">I certify that all information provided is accurate and complete *</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="updates">
+                                    <label for="updates">I agree to receive updates about my application status</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+                                <i class="fas fa-arrow-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">
+                                Next
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">
+                                <i class="fas fa-check"></i>
+                                Submit Application
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="registration-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Quick Process</h3>
+                        <p>Our registration process typically takes 3-5 business days for review and approval.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Our team will guide you through the process and help optimize your organization's profile.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track donations, manage campaigns, and analyze donor engagement with our comprehensive dashboard.</p>
+                    </div>
+
+                    <div class="requirements-list">
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Valid 501(c)(3) status or equivalent</li>
+                            <li><i class="fas fa-check"></i> Registered organization address</li>
+                            <li><i class="fas fa-check"></i> Active board of directors</li>
+                            <li><i class="fas fa-check"></i> Clear mission statement</li>
+                            <li><i class="fas fa-check"></i> Financial transparency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>VShare</h3>
+                    <p>Connecting hearts, creating change</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="ngos.html">NGOs</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="register.html">Register</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made at [Hackathon Name] by Team VShare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now - VShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>VShare</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ngos.html" class="nav-link">NGOs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link active">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Donate Section -->
+    <section class="donate-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Make a Donation</h1>
+                <p>Your contribution can make a real difference in someone's life</p>
+            </div>
+            
+            <div class="donate-content">
+                <div class="donation-form-container">
+                    <div class="donation-options">
+                        <h3>Choose Donation Amount</h3>
+                        <div class="amount-buttons">
+                            <button class="amount-btn" data-amount="25">$25</button>
+                            <button class="amount-btn" data-amount="50">$50</button>
+                            <button class="amount-btn active" data-amount="100">$100</button>
+                            <button class="amount-btn" data-amount="250">$250</button>
+                            <button class="amount-btn" data-amount="500">$500</button>
+                            <button class="amount-btn" data-amount="custom">Custom</button>
+                        </div>
+                        <div class="custom-amount" style="display: none;">
+                            <input type="number" id="customAmount" placeholder="Enter amount" min="1">
+                        </div>
+                    </div>
+
+                    <form class="donation-form">
+                        <div class="form-section">
+                            <h3>Select NGO</h3>
+                            <div class="form-group">
+                                <select id="selectedNgo" required>
+                                    <option value="">Choose an NGO to support</option>
+                                    <option value="hope-foundation">Hope Foundation - Education</option>
+                                    <option value="green-earth">Green Earth Initiative - Environment</option>
+                                    <option value="care-hearts">Care Hearts - Healthcare</option>
+                                    <option value="food-bridge">Food Bridge - Hunger Relief</option>
+                                    <option value="shelter-home">Shelter Home - Housing</option>
+                                    <option value="clean-water">Clean Water Project - Water Access</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Donor Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Payment Information</h3>
+                            <div class="payment-methods">
+                                <div class="payment-method active" data-method="card">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Credit/Debit Card</span>
+                                </div>
+                                <div class="payment-method" data-method="paypal">
+                                    <i class="fab fa-paypal"></i>
+                                    <span>PayPal</span>
+                                </div>
+                                <div class="payment-method" data-method="bank">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank Transfer</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" placeholder="123" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label for="message">Message (Optional)</label>
+                                <textarea id="message" placeholder="Leave a message of support..."></textarea>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="anonymous">
+                                <label for="anonymous">Make this donation anonymous</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter">
+                                <label for="newsletter">Subscribe to updates from this NGO</label>
+                            </div>
+                        </div>
+
+                        <div class="donation-summary">
+                            <div class="summary-row">
+                                <span>Donation Amount:</span>
+                                <span class="amount-display">$100.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Processing Fee:</span>
+                                <span>$3.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span class="total-amount">$103.00</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-heart"></i>
+                            Complete Donation
+                        </button>
+                    </form>
+                </div>
+
+                <div class="donation-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure & Safe</h3>
+                        <p>Your donation is processed through secure, encrypted channels. We never store your payment information.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <h3>Tax Deductible</h3>
+                        <p>All donations are tax-deductible. You'll receive a receipt via email for your records.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Track Impact</h3>
+                        <p>Receive updates on how your donation is being used and the impact it's making in the community.</p>
+                    </div>
+
+                    <div class="recent-donations">
+                        <h3>Recent Donations</h3>
+                        <div class="donation-item">
+                            <div class="donor-info">
+                                <strong>Anonymous</strong>
+                                <span>donated $250 to Hope Foundation</span>
+                            </div>
+                            <span class="time">2 minutes ago</span>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donor-info">
+                                <strong>Sarah M.</strong>
+                                <span>donated $100 to Green Earth Initiative</span>
+                            </div>
+                            <span class="time">15 minutes ago</span>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donor-info">
+                                <strong>John D.</strong>
+                                <span>donated $75 to Care Hearts</span>
+                            </div>
+                            <span class="time">1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>VShare</h3>
+                    <p>Connecting hearts, creating change</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="ngos.html">NGOs</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="register.html">Register</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made at [Hackathon Name] by Team VShare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
