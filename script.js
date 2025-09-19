@@ -261,6 +261,40 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)"
     }
   })
+
+  // Collaboration page functionality
+  const collaborationForm = document.getElementById("collaborationForm")
+  if (collaborationForm) {
+    collaborationForm.addEventListener("submit", function (e) {
+      e.preventDefault()
+
+      const submitBtn = this.querySelector('button[type="submit"]')
+      const originalText = submitBtn.innerHTML
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating...'
+      submitBtn.disabled = true
+
+      setTimeout(() => {
+        showNotification(
+          "Collaboration project created successfully! Other NGOs can now view and join your initiative.",
+          "success",
+        )
+        closeCollaborationForm()
+        this.reset()
+        submitBtn.innerHTML = originalText
+        submitBtn.disabled = false
+      }, 2000)
+    })
+  }
+
+  // Close modal when clicking outside
+  const modal = document.getElementById("collaborationModal")
+  if (modal) {
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeCollaborationForm()
+      }
+    })
+  }
 })
 
 // Notification system
@@ -420,6 +454,46 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriter, 1000)
   }
 })
+
+// Collaboration functions
+function showCollaborationForm() {
+  const modal = document.getElementById("collaborationModal")
+  if (modal) {
+    modal.style.display = "block"
+  }
+}
+
+function closeCollaborationForm() {
+  const modal = document.getElementById("collaborationModal")
+  if (modal) {
+    modal.style.display = "none"
+  }
+}
+
+function scrollToProjects() {
+  const projectsSection = document.querySelector(".active-collaborations")
+  if (projectsSection) {
+    projectsSection.scrollIntoView({ behavior: "smooth" })
+  }
+}
+
+function searchPartners() {
+  const causeFilter = document.getElementById("causeFilter")?.value
+  const locationFilter = document.getElementById("locationFilter")?.value
+  const sizeFilter = document.getElementById("sizeFilter")?.value
+
+  // Show loading state
+  showNotification("Searching for collaboration partners...", "info")
+
+  // Simulate search (in real app, this would make API call)
+  setTimeout(() => {
+    showNotification("Found 3 potential collaboration partners!", "success")
+  }, 1500)
+}
+
+function sendCollaborationRequest(ngoId) {
+  showNotification("Collaboration request sent successfully! The NGO will be notified.", "success")
+}
 
 // Performance optimization: Lazy loading for images
 document.addEventListener("DOMContentLoaded", () => {

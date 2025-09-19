@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Collaboration - VShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>VShare</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ngos.html" class="nav-link">NGOs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="collaboration.html" class="nav-link active">Collaborate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="collaboration-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>NGO Collaboration Hub</h1>
+                <p>Connect, collaborate, and amplify your impact by partnering with like-minded organizations</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showCollaborationForm()">
+                        <i class="fas fa-handshake"></i>
+                        Start Collaboration
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToProjects()">
+                        <i class="fas fa-eye"></i>
+                        View Projects
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Benefits -->
+    <section class="collaboration-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Collaborate?</h2>
+                <p>Stronger together - amplify your impact through strategic partnerships</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Shared Resources</h3>
+                    <p>Pool resources, expertise, and networks to tackle larger challenges more effectively</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Greater Impact</h3>
+                    <p>Reach more beneficiaries and create lasting change through coordinated efforts</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Knowledge Exchange</h3>
+                    <p>Share best practices, learn from each other, and innovate together</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Expanded Reach</h3>
+                    <p>Access new communities and geographical areas through partner networks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Collaborations -->
+    <section class="active-collaborations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Active Collaboration Projects</h2>
+                <p>Ongoing partnerships making a difference</p>
+            </div>
+            <div class="collaborations-grid">
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <h3>Clean Water Initiative</h3>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <div class="partners">
+                        <div class="partner-logos">
+                            <div class="partner-logo">HF</div>
+                            <div class="partner-logo">NL</div>
+                            <div class="partner-logo">HA</div>
+                        </div>
+                        <p><strong>Partners:</strong> Hope Foundation, Nourish Lives, Health for All</p>
+                    </div>
+                    <p class="project-description">Joint effort to provide clean water access to 50 rural villages across 3 states</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Villages Covered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">₹15L</span>
+                            <span class="stat-label">Funds Raised</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5,000</span>
+                            <span class="stat-label">Beneficiaries</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <h3>Education for All</h3>
+                        <span class="status-badge planning">Planning</span>
+                    </div>
+                    <div class="partners">
+                        <div class="partner-logos">
+                            <div class="partner-logo">HF</div>
+                            <div class="partner-logo">NL</div>
+                        </div>
+                        <p><strong>Partners:</strong> Hope Foundation, Nourish Lives</p>
+                    </div>
+                    <p class="project-description">Comprehensive education program combining nutrition and learning support</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">10</span>
+                            <span class="stat-label">Schools Planned</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">₹8L</span>
+                            <span class="stat-label">Target Funds</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2,000</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Join Project</button>
+                </div>
+
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <h3>Healthcare Outreach</h3>
+                        <span class="status-badge completed">Completed</span>
+                    </div>
+                    <div class="partners">
+                        <div class="partner-logos">
+                            <div class="partner-logo">HA</div>
+                            <div class="partner-logo">HF</div>
+                        </div>
+                        <p><strong>Partners:</strong> Health for All, Hope Foundation</p>
+                    </div>
+                    <p class="project-description">Mobile health camps providing free medical checkups and treatments</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">Camps Conducted</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">₹12L</span>
+                            <span class="stat-label">Total Spent</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8,000</span>
+                            <span class="stat-label">Patients Treated</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">View Report</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Partners -->
+    <section class="find-partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Collaboration Partners</h2>
+                <p>Connect with NGOs that share your mission and values</p>
+            </div>
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label>Cause Area</label>
+                    <select id="causeFilter">
+                        <option value="">All Causes</option>
+                        <option value="education">Education</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="environment">Environment</option>
+                        <option value="poverty">Poverty Alleviation</option>
+                        <option value="women">Women Empowerment</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Location</label>
+                    <select id="locationFilter">
+                        <option value="">All Locations</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Organization Size</label>
+                    <select id="sizeFilter">
+                        <option value="">Any Size</option>
+                        <option value="small">Small (1-50 members)</option>
+                        <option value="medium">Medium (51-200 members)</option>
+                        <option value="large">Large (200+ members)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="searchPartners()">
+                    <i class="fas fa-search"></i>
+                    Search Partners
+                </button>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-header">
+                        <div class="partner-logo-large">HF</div>
+                        <div class="partner-info">
+                            <h3>Hope Foundation</h3>
+                            <p class="partner-cause">Education & Child Welfare</p>
+                            <p class="partner-location"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+                        </div>
+                    </div>
+                    <div class="partner-details">
+                        <p>Dedicated to providing quality education and support to underprivileged children across India.</p>
+                        <div class="partner-stats">
+                            <span><i class="fas fa-users"></i> 150 Members</span>
+                            <span><i class="fas fa-calendar"></i> 8 Years Active</span>
+                            <span><i class="fas fa-handshake"></i> 12 Collaborations</span>
+                        </div>
+                        <div class="collaboration-interests">
+                            <span class="interest-tag">Education</span>
+                            <span class="interest-tag">Child Welfare</span>
+                            <span class="interest-tag">Rural Development</span>
+                        </div>
+                    </div>
+                    <div class="partner-actions">
+                        <button class="btn btn-primary" onclick="sendCollaborationRequest('hope-foundation')">
+                            <i class="fas fa-handshake"></i>
+                            Send Request
+                        </button>
+                        <a href="ngo-hope-foundation.html" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-header">
+                        <div class="partner-logo-large">NL</div>
+                        <div class="partner-info">
+                            <h3>Nourish Lives</h3>
+                            <p class="partner-cause">Food Security & Nutrition</p>
+                            <p class="partner-location"><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                        </div>
+                    </div>
+                    <div class="partner-details">
+                        <p>Fighting hunger and malnutrition by providing nutritious meals and nutrition education.</p>
+                        <div class="partner-stats">
+                            <span><i class="fas fa-users"></i> 200 Members</span>
+                            <span><i class="fas fa-calendar"></i> 6 Years Active</span>
+                            <span><i class="fas fa-handshake"></i> 8 Collaborations</span>
+                        </div>
+                        <div class="collaboration-interests">
+                            <span class="interest-tag">Nutrition</span>
+                            <span class="interest-tag">Food Security</span>
+                            <span class="interest-tag">Community Health</span>
+                        </div>
+                    </div>
+                    <div class="partner-actions">
+                        <button class="btn btn-primary" onclick="sendCollaborationRequest('nourish-lives')">
+                            <i class="fas fa-handshake"></i>
+                            Send Request
+                        </button>
+                        <a href="ngo-nourish-lives.html" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-header">
+                        <div class="partner-logo-large">HA</div>
+                        <div class="partner-info">
+                            <h3>Health for All</h3>
+                            <p class="partner-cause">Healthcare & Medical Aid</p>
+                            <p class="partner-location"><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</p>
+                        </div>
+                    </div>
+                    <div class="partner-details">
+                        <p>Providing accessible healthcare services and medical aid to underserved communities.</p>
+                        <div class="partner-stats">
+                            <span><i class="fas fa-users"></i> 120 Members</span>
+                            <span class="fas fa-calendar"></i> 5 Years Active</span>
+                            <span><i class="fas fa-handshake"></i> 15 Collaborations</span>
+                        </div>
+                        <div class="collaboration-interests">
+                            <span class="interest-tag">Healthcare</span>
+                            <span class="interest-tag">Medical Aid</span>
+                            <span class="interest-tag">Rural Health</span>
+                        </div>
+                    </div>
+                    <div class="partner-actions">
+                        <button class="btn btn-primary" onclick="sendCollaborationRequest('health-for-all')">
+                            <i class="fas fa-handshake"></i>
+                            Send Request
+                        </button>
+                        <a href="ngo-health-for-all.html" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Form Modal -->
+    <div id="collaborationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Start a Collaboration</h2>
+                <span class="close" onclick="closeCollaborationForm()">&times;</span>
+            </div>
+            <form id="collaborationForm" class="collaboration-form">
+                <div class="form-group">
+                    <label for="projectTitle">Project Title</label>
+                    <input type="text" id="projectTitle" name="projectTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Project Description</label>
+                    <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="causeArea">Cause Area</label>
+                        <select id="causeArea" name="causeArea" required>
+                            <option value="">Select Cause</option>
+                            <option value="education">Education</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="environment">Environment</option>
+                            <option value="poverty">Poverty Alleviation</option>
+                            <option value="women">Women Empowerment</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="targetFunding">Target Funding (₹)</label>
+                        <input type="number" id="targetFunding" name="targetFunding" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="duration">Project Duration</label>
+                        <select id="duration" name="duration" required>
+                            <option value="">Select Duration</option>
+                            <option value="1-3">1-3 months</option>
+                            <option value="3-6">3-6 months</option>
+                            <option value="6-12">6-12 months</option>
+                            <option value="12+">12+ months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="partnersNeeded">Partners Needed</label>
+                        <input type="number" id="partnersNeeded" name="partnersNeeded" min="1" max="10" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="requiredSkills">Required Skills/Resources</label>
+                    <textarea id="requiredSkills" name="requiredSkills" rows="3" placeholder="e.g., Medical expertise, Educational materials, Funding, Volunteers"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeCollaborationForm()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Collaboration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>VShare</h3>
+                    <p>Connecting hearts, creating change</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="ngos.html">NGOs</a>
+                    <a href="collaboration.html">Collaborate</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="register.html">Register</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made at [Hackathon Name] by Team VShare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -764,7 +764,7 @@ body {
 .info-icon {
   width: 60px;
   height: 60px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
   background: linear-gradient(135deg, #2563eb, #10b981);
   border-radius: 50%;
   display: flex;
@@ -1395,16 +1395,16 @@ body {
 }
 
 .stat-number {
-  color: #2563eb;
-  font-size: 1.8rem;
-  font-weight: 700;
   display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
 }
 
 .stat-label {
+  font-size: 0.8rem;
   color: #64748b;
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
+  text-transform: uppercase;
 }
 
 .contact-item {
@@ -1682,6 +1682,354 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Collaboration Page Styles */
+/* Collaboration Hero */
+.collaboration-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  color: white;
+  text-align: center;
+}
+
+.collaboration-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.collaboration-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Collaboration Benefits */
+.collaboration-benefits {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+/* Active Collaborations */
+.active-collaborations {
+  padding: 80px 0;
+  background: white;
+}
+
+.collaborations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.collaboration-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.collaboration-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.collaboration-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.collaboration-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.planning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.partners {
+  margin-bottom: 1rem;
+}
+
+.partner-logos {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.partner-logo {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2563eb, #10b981);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.project-description {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.project-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+/* Find Partners */
+.find-partners {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.search-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.partner-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.partner-logo-large {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2563eb, #10b981);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.partner-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0;
+}
+
+.partner-cause {
+  color: #2563eb;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.partner-location {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.partner-details p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.partner-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.partner-stats span {
+  font-size: 0.8rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.collaboration-interests {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.interest-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.partner-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.partner-actions .btn {
+  flex: 1;
+}
+
+/* Collaboration Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.close {
+  color: #64748b;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #1e293b;
+}
+
+.collaboration-form {
+  padding: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {
@@ -1807,6 +2155,36 @@ body {
   }
 
   .causes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collaboration-hero h1 {
+    font-size: 2rem;
+  }
+
+  .search-filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: auto;
+  }
+
+  .project-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .partner-actions {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .collaborations-grid,
+  .partners-grid {
     grid-template-columns: 1fr;
   }
 }
